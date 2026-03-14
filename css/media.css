@@ -1,0 +1,36 @@
+@media(max-width: 400px) {
+
+    nav {
+        padding: .8em 1em;
+    }
+
+    .login img {
+        max-width: 26px;
+    }
+
+    .logo img {
+        max-width: 6.25em;
+    }
+
+    .cart img {
+        max-width: 20px;
+    }
+
+    /* footer */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        padding: 3.5em 0 2.5em 0;
+    }
+
+    .footer-logo img {
+        max-width: 8em;
+    }
+
+    .footer-logo,
+    .slogan {
+        justify-self: center;
+    }
+
+    
+}
