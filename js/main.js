@@ -6,3 +6,4 @@ async function loadComponent(id, file) {
 
 loadComponent("header", "../components/header.html");
 loadComponent("footer", "../components/footer.html");
+loadComponent("hero-slider", "../components/carousel.html");

@@ -1,19 +1,53 @@
-@media(max-width: 400px) {
+@media (max-width: 768px) {
+    body {
+        background-color: bisque;
+    }
 
     nav {
-        padding: .8em 1em;
+        padding: .8em 2em;
     }
 
-    .login img {
-        max-width: 26px;
+    .slider {
+        max-width: 600px;
     }
 
-    .logo img {
-        max-width: 6.25em;
+    .slide-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "title"
+            "img"
+            "button";
     }
 
-    .cart img {
-        max-width: 20px;
+    .slide-content {
+        padding: 2.5em 2em;
+        gap: 1.5em;
+    }
+
+    .slide-description {
+        margin-top: 1em;
+    }
+
+    .slide-media {
+        justify-self: start;
+    }
+
+    .slide-text {
+        grid-area: title;
+    }
+
+    .slide-media {
+        grid-area: img;
+    }
+
+    .slide-button {
+        grid-area: button;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 .3em;
     }
 
     /* footer */
@@ -31,6 +65,57 @@
     .slogan {
         justify-self: center;
     }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 480px) {
+
+    
+
+    .login img {
+        max-width: 26px;
+    }
+
+    .logo img {
+        max-width: 6.25em;
+    }
+
+    .cart img {
+        max-width: 20px;
+    }
+
+    /* carousel */
+
+    .slider {
+        max-width: 400px;
+    }
+
+    .slide-title {
+        font-size: 24px;
+    }
+
+    .slide-description {
+        margin-top: .8em;
+        font-size: 16px;
+    } 
+
+    .slide-media img {
+        max-width: 350px;
+    }
+
+    form {
+        padding: 0 1em;
+    }
+
+
+    
 
     
 }
