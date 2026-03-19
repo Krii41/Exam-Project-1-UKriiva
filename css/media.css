@@ -7,10 +7,6 @@
         padding: .8em 2em;
     }
 
-    .slider {
-        max-width: 600px;
-    }
-
     .slide-content {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -92,10 +88,6 @@
     }
 
     /* carousel */
-
-    .slider {
-        max-width: 400px;
-    }
 
     .slide-title {
         font-size: 24px;

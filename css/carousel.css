@@ -1,25 +1,23 @@
 .carousel {
-    background-image: url("../assets/images/background.jpg");
-    background-size: cover; 
+    border: 1px solid green;
 }
 
 .slider {
-    overflow: hidden;
-    max-width: 900px;
-    margin: 0 auto;
+    background-image: url("../assets/images/background.jpg");
+    background-size: cover;
+    border: 1px solid blue;
     
-}
-
-.slider-track {
-    display: flex;
     
 }
 
 .slide {
-    
-    flex: 0 0 100%;
+    display: none;
 }
 
+.slide.selected {
+    display: block;
+    
+}
 
 .slide-content {    
     border: 1px solid red;
@@ -80,7 +78,12 @@
     transition: background-color 0.6s ease;
 }
 
-.dot:active,
+/* selected ?*/
+/* .dot:active,
 .dot:hover {
+    background-color: var(--color-primary);
+} */
+
+.dot-selected {
     background-color: var(--color-primary);
 }

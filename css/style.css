@@ -81,12 +81,6 @@ nav {
     max-width: 25px;
 }
 
-.hero-slider {
-    background-image: url("../assets/images/background.jpg");
-    background-size: cover;
-
-}
-
 /*   buttons/links   */
 
 .cta-button {
