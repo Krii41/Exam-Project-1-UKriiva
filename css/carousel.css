@@ -1,7 +1,13 @@
+.carousel {
+    background-image: url("../assets/images/background.jpg");
+    background-size: cover; 
+}
+
 .slider {
     overflow: hidden;
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
+    
 }
 
 .slider-track {
@@ -13,6 +19,7 @@
     
     flex: 0 0 100%;
 }
+
 
 .slide-content {    
     border: 1px solid red;
