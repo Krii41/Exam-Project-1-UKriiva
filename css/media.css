@@ -7,6 +7,10 @@
         padding: .8em 2em;
     }
 
+    .slider {
+        height: 570px;
+    }
+
     .slide-content {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -17,7 +21,7 @@
 
     .slide-content {
         padding: 2.5em 2em;
-        gap: 1.5em;
+        gap: 1em;
     }
 
     .slide-description {
@@ -88,6 +92,10 @@
     }
 
     /* carousel */
+
+    .slider {
+        height: 500px;
+    }
 
     .slide-title {
         font-size: 24px;

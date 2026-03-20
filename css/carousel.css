@@ -1,26 +1,28 @@
 .carousel {
-    border: 1px solid green;
+    position: relative;
 }
 
 .slider {
     background-image: url("../assets/images/background.jpg");
     background-size: cover;
-    border: 1px solid blue;
-    
-    
+    position: relative;
+    height: 500px;    
 }
 
 .slide {
-    display: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
 }
 
 .slide.selected {
-    display: block;
-    
+    opacity: 1;
+    visibility: visible;
 }
 
 .slide-content {    
-    border: 1px solid red;
     max-width: 850px;
     margin: 0 auto;
     padding: 4.5em 1em;
@@ -77,12 +79,6 @@
     cursor: pointer;
     transition: background-color 0.6s ease;
 }
-
-/* selected ?*/
-/* .dot:active,
-.dot:hover {
-    background-color: var(--color-primary);
-} */
 
 .dot-selected {
     background-color: var(--color-primary);
