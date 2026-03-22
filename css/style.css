@@ -100,6 +100,11 @@ nav {
     text-wrap: nowrap;
 }
 
+.btn-link {
+    text-align: center;
+    text-wrap: nowrap;
+}
+
 .link-primary {
     color: var(--color-primary);
     font-weight: 600;
@@ -129,6 +134,12 @@ nav {
 .link-primary:hover::before {
     transform-origin: left;
     transform: scaleX(1);
+}
+
+/*   form   */
+
+input::placeholder {
+    color: var(--color-input-text);
 }
 
 /*  succsess page  */

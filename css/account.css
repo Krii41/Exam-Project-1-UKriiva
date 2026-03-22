@@ -17,7 +17,7 @@ label {
 
 input {
     font-size: 1em;
-    color: var(--color-input-text);
+    color: var(--color-primary);
     letter-spacing: .6px;
     background-color: var(--color-background);
     padding: 15px;
