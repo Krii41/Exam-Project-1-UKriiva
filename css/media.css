@@ -50,6 +50,18 @@
         margin: 0 .3em;
     }
 
+    /*  product page  */
+
+    .product-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "image"
+            "details"
+            "reviews";
+    }
+
+    
+
     /* footer */
 
     .footer-content {
