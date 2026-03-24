@@ -43,6 +43,14 @@ a {
     text-decoration: none;
 }
 
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
 header {
     background-image: linear-gradient(
         rgba(255, 255, 255, 0.85),

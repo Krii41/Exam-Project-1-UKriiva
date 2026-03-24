@@ -11,43 +11,50 @@
 <body>
     <header id="header"></header>
     <main>
-        <article class="product-layout">
+        <article class="product-layout grid">
             <section class="product-image">   
-                <img src="../assets/testimages/3-headphones-beats.jpg" alt="cold headphones">
+                <img src="../assets/testimages/11-shampoo.jpg" alt="cold headphones">
             </section>
-            <section class="product-details">
-                <div>
+
+            <section class="product-details flex">
+                <div class="product-header flex">
                     <h1>Gold Headphones</h1>
-                    <img src="../assets/icons/share.png" alt="share">
+                    <button class="share-link">
+                        <img src="../assets/icons/share.png" alt="Share product">
+                    </button>
                 </div>
-                <div>
-                    <span class="tags">Headphones</span>
+                <div class="tags flex">
+                    <span class="tag">Headphones</span>
+                    <span class="tag">Fashion</span>
                 </div>
-                <div class="rating">
+                <div class="rating flex">
                     <img src="../assets/icons/star.png" alt="star">
                     <span>4.0</span>
                     <span>(1 review)</span>
                 </div>
-                <p>$ 382.49</p>
-                <p>$ 449.99</p>
+                <p class="price-current">$ 382.49</p>
+                <p class="price-original">$ 449.99</p>
                 <p>
                     Professional headphones with gold trim.
                 </p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart cta-button btn-primary">Add to Cart</button>
             </section>
+
             <section class="reviews">
                 <h2>Reviews</h2>
-                <article class="review">
-                    <div class="rating">
-                        <img src="../assets/icons/star.png" alt="">
-                        <img src="../assets/icons/star.png" alt="">
-                        <img src="../assets/icons/star.png" alt="">
-                        <img src="../assets/icons/star.png" alt="">
-                        <img src="../assets/icons/emptystar.png" alt="">
+                    <div class="review-list grid">
+                        <article class="review flex">
+                            <div class="review-rating flex">
+                                <img src="../assets/icons/star.png" alt="">
+                                <img src="../assets/icons/star.png" alt="">
+                                <img src="../assets/icons/star.png" alt="">
+                                <img src="../assets/icons/star.png" alt="">
+                                <img src="../assets/icons/emptystar.png" alt="">
+                            </div>
+                            <blockquote class="review-text">"Good sound quality"</blockquote>
+                            <p class="review-author">Michael J.</p>
+                        </article>
                     </div>
-                    <blockquote class="review-text">"Good sound quality"</blockquote>
-                    <p class="review-author">Michael J.</p>
-                </article>
             </section>
         </article>
     </main>

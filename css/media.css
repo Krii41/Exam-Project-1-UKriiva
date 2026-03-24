@@ -60,7 +60,11 @@
             "reviews";
     }
 
-    
+    .add-to-cart {
+        margin-top: 3em;
+    }
+
+
 
     /* footer */
 
@@ -122,6 +126,10 @@
 
     .slide-media img {
         max-width: 350px;
+    }
+
+    .add-to-cart {
+        align-self: center;
     }
 
     form {

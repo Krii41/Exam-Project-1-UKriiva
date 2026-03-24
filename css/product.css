@@ -1,12 +1,10 @@
 main {
     margin: 0 auto;
-    border: 1px solid red; 
+    max-width: var(--max-width);
 }
 
-.product-layout {
-    border: 1px solid green;  
+.product-layout { 
     margin: 4.5em 1em;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "image details"
@@ -15,9 +13,8 @@ main {
 }
 
 .product-image {
-    grid-area: image;
-    width: 380px;
-    height: 400px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
 }
 
 .product-image img {
@@ -28,10 +25,99 @@ main {
 
 .product-details {
     grid-area: details;
-    border: 1px solid blue;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-header {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .4em;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.share-link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.share-link img {
+    width: 20px;
+}
+
+.rating {
+    margin: 1.3em 0 2.2em;
+}
+
+.review-rating img,
+.rating img {
+    width: 15px;
+    height: 15px;
+}
+
+.rating,
+.tags {
+    align-items: center;
+    gap: .5em;
+}
+
+.tag {
+    font-size: clamp(10px, 4vw, 12px);;
+    color: var(--color-tags);
+    border: 1px solid var(--color-tags);
+    padding: 3px 8px;
+    border-radius: 15px;
+}
+
+.price-current {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+}
+
+.price-original {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    color: var(--color-secondary);
+    text-decoration: line-through;
+    margin: .3em 0 1em;
+}
+
+.cta-button {
+    margin-top: auto;
+    align-self: self-start;
+}
+
+h2 {
+    margin-bottom: .8em;
 }
 
 .reviews {
     grid-area: reviews;
-    border: 1px solid brown;
+    margin-top: 2.5em;
+}
+
+.review-rating {
+    gap: 2px;
+
+}
+
+.review-text {
+    font-weight: 500;
+}
+
+.review-author {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.review-list {
+    gap: 1.5em;
+}
+
+.review {
+    flex-direction: column;
+    gap: .4em;
 }
