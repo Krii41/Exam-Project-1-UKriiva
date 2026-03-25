@@ -4,12 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/media.css">
     <title>Cart | The Edit</title>
 </head>
 <body>
     <header id="header"></header>
     <main>
         <h1>Cart</h1>
+        
+        <div class="cart-container">
+            <button class="clear-cart">Clear cart</button>
+            <section class="cart grid">
+
+                <div class="cart-items grid">
+
+                    <article class="cart-item grid">
+                        <div class="cart-item-image">
+                            <img src="../assets/testimages/3-headphones-beats.jpg" alt="">
+                        </div>
+                        <h2 class="cart-item-title">Gold Headphones</h2>
+                        <p class="item-price">$ 382.49</p>
+                        <div class="cart-controls flex">
+                            <button class="qty-btn">-</button>
+                            <span class="item-qty">3</span>
+                            <button class="qty-btn">+</button>
+                        </div>   
+                        <button class="item-remove">&times;</button>
+                    </article>
+                    <article class="cart-item grid">
+                        <div class="cart-item-image">
+                            <img src="../assets/testimages/3-headphones-beats.jpg" alt="">
+                        </div>
+                        <h2 class="cart-item-title">Gold Headphones</h2>
+                        <p class="item-price">$ 382.49</p>
+                        <div class="cart-controls flex">
+                            <button class="qty-btn">-</button>
+                            <span class="item-qty">3</span>
+                            <button class="qty-btn">+</button>
+                        </div>   
+                        <button class="item-remove">&times;</button>
+                    </article>
+
+                </div>
+    
+                <section class="cart-summary">
+                    <h2>Cart Totals</h2>
+                    <div>
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <div>
+                        <span>Subtotal</span>
+                        <span>$ 1142.48</span>
+                    </div>
+                    <div>
+                        <span>Total</span>
+                        <span>$ 1142.48</span>
+                    </div>
+                    <a href="../checkout/index.html">Proceed to Checkout</a>
+                </section>
+    
+    
+            </section>
+        </div>
     </main>
     <footer id="footer"></footer>
     <script type="module" src="../js/main.js"></script>

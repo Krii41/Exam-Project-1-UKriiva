@@ -12,6 +12,7 @@
     --color-input-border: #e8e8e8;
     --color-input-text: #bfbfbf;
     --color-radio-btn: #e8e8e8;
+    --color-cart-action: #ccc7c6;
     --color-mystery-title: #444444;
     --color-mystery-subtitle: #666666;
     --color-mystery-hint: #999999;
@@ -81,11 +82,11 @@ nav {
     max-width: 170px;
 }
 
-.cart {
+.cart-img {
     justify-self: end;
 }
 
-.cart img {
+.cart-img img {
     max-width: 25px;
 }
 
