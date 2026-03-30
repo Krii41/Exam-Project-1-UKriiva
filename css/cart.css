@@ -57,7 +57,7 @@ h1 {
 .item-price,
 .item-qty {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .item-price {
@@ -113,7 +113,6 @@ h1 {
 
 .summary-label,
 .summary-value {
-    font-weight: 500;
     font-size: clamp(14px, 2.5vw, 16px);
 }
 

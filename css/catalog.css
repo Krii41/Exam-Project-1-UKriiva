@@ -1,0 +1,148 @@
+.product-container {
+    border: 1px solid red;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.product-container h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card a {
+    display: block;
+}
+
+.card-prices {
+    display: flex;
+    gap: 2em;
+}
+
+.price {
+    font-weight: 500;
+}
+
+.old-price {
+    color: var(--color-secondary);
+    text-decoration: line-through;
+}
+
+/*  mystery card  */
+
+.card-mystery .card-media {
+    position: relative;
+}
+
+.card-img-hover {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+.card-overlay h3 {
+    color: var(--color-mystery-title);
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.card-overlay p {
+    color: var(--color-mystery-subtitle);
+    font-size: 1.25em;
+    margin-bottom: 2em;
+}
+
+.card-overlay span {
+    color: var(--color-mystery-hint);
+    font-size: 1em;
+}
+
+.card-mystery .card-prices {
+    opacity: 0;
+    transform: translate(10px);
+    transition: opasity 0.5s ease, transform 0.5s ease;
+}
+
+.card-mystery:hover .card-img-hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card-mystery:hover .card-overlay {
+    opacity: 0;
+}
+
+.card-mystery:hover .card-prices {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/*  futured  */  
+
+.futured {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    align-items: start;
+}
+
+.card-large {
+    grid-row: span 2;
+}
+
+.card-large img {
+    height: 560px;
+}
+
+.card:not(.card-large) img {
+    height: 250px;
+}
+
+/*  product list  */
+
+.product-list {
+    background-color: var(--color-surface);
+}
+
+.future-extra {
+    grid-template-columns: 0.85fr 1.3fr;
+    gap: 1.5em;
+    align-items: start;
+}
+
+.future-extra .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-large-right {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
