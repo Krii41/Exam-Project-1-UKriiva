@@ -10,7 +10,6 @@
  .product-container {
     max-width: var(--max-width);
     margin: 0 auto;
-    border: 1px solid red;
     padding: 1em;
 }
 
@@ -208,16 +207,34 @@
     
 }
 
-.card-wide-small a img {
+.card-wide-small img {
     height: 100%;
     width: 100%;
     display: block;
     object-fit: cover;
 }
 
+/*  this season  */
 
-  
+.this-season .product-group-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
 
+.card-wide-image {
+    grid-column: 2 / span 2;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 1.8em;
+}
+
+.card-wide-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 
