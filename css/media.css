@@ -195,20 +195,6 @@
         grid-row: 1;
         grid-column: 1 / span 2;
     }
-
-    .card-mystery:focus-within .card-img-hover {
-        opacity: 1;
-        transform: scale(1);
-    }
-    
-    .card-mystery:focus-within .card-overlay {
-        opacity: 0;
-    }
-    
-    .card-mystery:focus-within .card-prices {
-        opacity: 1;
-        transform: translateY(0);
-    }
     
     /* footer */
 
