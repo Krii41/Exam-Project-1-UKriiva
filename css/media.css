@@ -106,6 +106,12 @@
         justify-self: end;
     }
 
+    /*  feed page  */
+
+    .product-container {
+        padding: 1em;
+    }
+
     .products-grid,
     .product-group-grid {
         grid-template-columns: 1fr 1fr;
@@ -113,29 +119,63 @@
         border: 1px solid blue;
     }
 
+    .this-season .product-group-grid,
+    .product-group-tech .product-group-grid,
+    .editors-picks .products-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    } 
+
+    .card-large img,
+    .product-group .card-large img,
+    .product-group .card-small img,
+    .this-season .card-wide-small img,
+    .product-group-tech .card-tall img,
+    .editors-picks .card-large img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .editors-picks .card-decorative img,
+    .futured .card-decorative img,
+    .product-group .product-group-grid> .card:first-child img,
+    .this-season .card-wide-image img,
+    .card-wide img {
+        aspect-ratio: 16 / 8;
+    }
+
+    .futured .card-decorative img {
+        object-position: 100% 70%;
+    }
+
+    .editors-picks .card-decorative img {
+        object-position: 100% 20%;
+    }
+
     .futured .card-decorative {
         grid-row: 1;
         grid-column: 1 / span 2;
     }
 
-    .futured .card-decorative img {
-        aspect-ratio: 16 / 8;
-        object-position: 100% 70%;
+    .product-group .card-large,
+    .product-group-tech .card-wide-small {
+        display: flex;
+        flex-direction: column;
     }
 
     .futured .card-large {
         grid-column: 1;
         grid-row: 2;
     }
+    
+    .this-season .card-mystery,
+    .editors-picks .card-large {
+        grid-column: 2;
+        grid-row: 2; 
+    }
 
     .card-large {
         grid-row: 1;
-    }
-
-    .card-large img,
-    .product-group .card-large img,
-    .product-group .card-small img {
-        aspect-ratio: 1 / 1;
     }
 
     .product-group .card-large {
@@ -145,53 +185,10 @@
     .product-group .product-group-grid> .card:first-child {
         grid-column: 1 / span 2;
     }
-
-    .product-group .product-group-grid> .card:first-child img {
-        aspect-ratio: 16 / 7;
-    }
-
-    .editors-picks .products-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    } 
-    
-    .editors-picks .card-large {
-        grid-column: 2;
-        grid-row: 2; 
-    }
-
-    .product-group-tech .product-group-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 1fr 1fr 1fr;
-    }
-
-    .this-season .card-wide-small img,
-    .product-group-tech .card-tall img,
-    .editors-picks .card-large img {
-        aspect-ratio: 1 / 1;
-    }
-
-    .this-season .product-group-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
     
     .card-wide-image {
         grid-column: 1 / span 2;
         order: -1;
-    }
-
-    .this-season .card-mystery {
-        grid-row: 2;
-        grid-column: 2;
-    }
-
-    .editors-picks .card-decorative img {
-        aspect-ratio: 16 / 8;
-        object-position: 100% 20%;
     }
 
     .editors-picks .card-decorative {
@@ -199,33 +196,20 @@
         grid-column: 1 / span 2;
     }
 
+    .card-mystery:focus-within .card-img-hover {
+        opacity: 1;
+        transform: scale(1);
+    }
     
-
+    .card-mystery:focus-within .card-overlay {
+        opacity: 0;
+    }
     
-    /* responsive 
-@media (max-width: 900px) {
-    .featured-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .card-mystery:focus-within .card-prices {
+        opacity: 1;
+        transform: translateY(0);
     }
-  
-    .card-large {
-      grid-row: auto;
-    }
-  
-    .card-large .card-media,
-    .card-large > a {
-      aspect-ratio: 4 / 3;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .featured-grid {
-      grid-template-columns: 1fr;
-    }
-  } */ 
-
-
-
+    
     /* footer */
 
     .footer-content {
