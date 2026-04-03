@@ -1,4 +1,4 @@
-/* import { initCarousel } from "./carousel.js";
+import { initCarousel } from "./carousel.js";
 
 async function loadComponent(id, file) {
     const target = document.getElementById(id);
@@ -24,9 +24,9 @@ async function initPage() {
     }
 }
 
-initPage(); */
+initPage();
 
-import { initCarousel } from "./carousel.js";
+/* import { initCarousel } from "./carousel.js";
 
 const basePath = window.location.hostname.includes("github.io")
   ? "/EXAM-PROJECT-1-UKRIIVA"
@@ -63,4 +63,4 @@ async function initPage() {
   }
 }
 
-initPage();
+initPage(); */
