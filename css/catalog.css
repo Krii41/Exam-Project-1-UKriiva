@@ -1,6 +1,3 @@
-.futured {
-    margin-top: 3em;
- }
 
 .product-container h2 {
     margin-bottom: 1em;
@@ -10,7 +7,20 @@
  .product-container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 1em;
+    padding: 1em 2em;
+}
+
+.futured .product-container,
+.editors-picks .product-container,
+.this-season .product-container {
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+}
+
+.product-group-tech .product-container,
+.product-group .product-container {
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
 
 .products-grid {
@@ -23,24 +33,34 @@
 
 /*  product card  */
 
+
+.card img,
 .card a img {
     display: block;
     object-fit: cover;
     width: 100%;
 }
 
-.card-large {
-    grid-row: span 2;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    gap: .5em;
-}
-
+.card-wide-image img,
+.card-wide-small img,
 .card-large img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.card-large {
+    grid-row: span 2;
+}
+
+.card-large,
+.card-wide-image,
+.card-wide-small,
+.product-group .card-large {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: .5em;
 }
 
 .card-small img {
@@ -54,6 +74,7 @@
 }
 
 .card-prices {
+    font-size: 1em;
     display: flex;
     gap: 1em;
 }
@@ -93,19 +114,19 @@
 .card-overlay h3 {
     color: var(--color-mystery-title);
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: clamp(1.1em, 2.8vw, 1.5em);
     margin-bottom: 5px;
 }
 
 .card-overlay p {
     color: var(--color-mystery-subtitle);
-    font-size: 1.25em;
+    font-size: clamp(1em, 1.5vw, 1.25em);
     margin-bottom: 2em;
 }
 
 .card-overlay span {
     color: var(--color-mystery-hint);
-    font-size: 1em;
+    font-size: clamp(.9em, 1.2vw, 1em);
 }
 
 .card-mystery .card-prices {
@@ -134,11 +155,6 @@
     background-color: var(--color-surface);
 }
 
-.product-group .product-container {
-    padding-top: 3em;
-    padding-bottom: 3em;
-}
-
 .product-group-grid {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -153,10 +169,7 @@
 
 .product-group .card-large {
     grid-column: 2;
-    grid-row: 1 / span 2; 
-    display: grid;
-    grid-template-rows: 1fr auto;
-    gap: .5em;   
+    grid-row: 1 / span 2;   
 }
 
 /*  editor's picks  */
@@ -168,8 +181,7 @@
 
 .editors-picks .card-large {
     grid-column: 3;
-    grid-row: 1 / span 2;
-    
+    grid-row: 1 / span 2;    
 }
 
 /*  product group tech  */
@@ -194,24 +206,10 @@
 
 .product-group-tech .card-tall img {
     grid-column: span 2;
+    display: block;
+    width: 100%;
+    height: 100%;
     aspect-ratio: 9 / 12;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.card-wide-small {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    gap: .5em;
-    
-}
-
-.card-wide-small img {
-    height: 100%;
-    width: 100%;
-    display: block;
-    object-fit: cover;
 }
 
 /*  this season  */
@@ -224,16 +222,6 @@
 
 .card-wide-image {
     grid-column: 2 / span 2;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    gap: 1.8em;
-}
-
-.card-wide-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 
