@@ -11,12 +11,12 @@ async function loadComponent(id, file) {
 }
 
 async function initPage() {
-    await loadComponent("header", "/components/header.html");
-    await loadComponent("footer", "/components/footer.html");
+    await loadComponent("header", "../components/header.html");
+    await loadComponent("footer", "../components/footer.html");
 
     const hasCarousel = await loadComponent(
         "hero-slider",
-        "/components/carousel.html"
+        "../components/carousel.html"
     );
 
     if (hasCarousel) {
