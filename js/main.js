@@ -29,7 +29,7 @@ initPage(); */
 import { initCarousel } from "./carousel.js";
 
 const basePath = window.location.hostname.includes("github.io")
-  ? "/Exam-Project-1-UKriiva"
+  ? "/EXAM-PROJECT-1-UKRIIVA"
   : "";
 
 async function loadComponent(id, file) {
