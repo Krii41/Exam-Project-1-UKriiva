@@ -124,7 +124,7 @@ initPage();
 import { initCarousel } from "./js/carousel.js";
 
 const BASE_PATH = window.location.hostname.includes("github.io")
-  ? "/EXAM-PROJECT-1-UKRIIVA"
+  ? "/Exam-Project-1-Ukriiva"
   : "";
 
 function cleanPath(path) {
