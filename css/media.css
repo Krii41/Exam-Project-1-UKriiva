@@ -1,7 +1,7 @@
 @media (max-width: 768px) {
-    body {
+    /* body {
         background-color: bisque;
-    }
+    } */
 
     nav {
         padding: .8em 2em;
@@ -116,7 +116,6 @@
     .product-group-grid {
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 1fr 1fr 1fr; 
-        border: 1px solid blue;
     }
 
     .this-season .product-group-grid,
