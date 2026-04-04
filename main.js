@@ -44,7 +44,7 @@ const BASE_PATH =
   window.location.hostname === "127.0.0.1" ||
   window.location.hostname === "localhost"
     ? ""
-    : "/EXAM-PROJECT-1-UKRII";
+    : "/EXAM-PROJECT-1-UKRIIVA";
 
 function cleanPath(path) {
   return path.replace(/^(\.\/|\.\.\/)+/, "");
