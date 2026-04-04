@@ -1,5 +1,5 @@
 
-import { initCarousel } from "./carousel.js";
+import { initCarousel } from "./js/carousel.js";
 
 async function loadComponent(id, relativePath) {
   const target = document.getElementById(id);
@@ -23,12 +23,12 @@ async function loadComponent(id, relativePath) {
 }
 
 async function initPage() {
-  await loadComponent("header", "../components/header.html");
-  await loadComponent("footer", "../components/footer.html");
+  await loadComponent("header", "./components/header.html");
+  await loadComponent("footer", "./components/footer.html");
 
   const hasCarousel = await loadComponent(
     "hero-slider",
-    "../components/carousel.html"
+    "./components/carousel.html"
   );
 
   if (hasCarousel) {
