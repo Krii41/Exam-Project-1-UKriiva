@@ -1,4 +1,4 @@
-import { initCarousel } from "./carousel.js";
+/* import { initCarousel } from "./carousel.js";
 
 async function loadComponent(id, file) {
     const target = document.getElementById(id);
@@ -25,19 +25,18 @@ async function initPage() {
 }
 
 initPage();
+ */
 
-/* import { initCarousel } from "./carousel.js";
+import { initCarousel } from "./carousel.js";
 
-const basePath = window.location.hostname.includes("github.io")
-  ? "/EXAM-PROJECT-1-UKRIIVA"
-  : "";
+const BASE_PATH = "/EXAM-PROJECT-1-UKRIIVA";
 
 async function loadComponent(id, file) {
   const target = document.getElementById(id);
   if (!target) return false;
 
   try {
-    const response = await fetch(`${basePath}${file}`);
+    const response = await fetch(`${BASE_PATH}${file}`);
     if (!response.ok) throw new Error(`Failed to load ${file}`);
 
     const html = await response.text();
@@ -63,4 +62,4 @@ async function initPage() {
   }
 }
 
-initPage(); */
+initPage();
