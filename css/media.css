@@ -1,10 +1,11 @@
 @media (max-width: 768px) {
-    /* body {
-        background-color: bisque;
-    } */
 
     nav {
         padding: .8em 2em;
+    }
+
+    main {
+        margin-bottom: 3em;
     }
 
     .slider {
@@ -272,10 +273,7 @@
 
     .cart-summary {
         margin: 0 auto;
+        padding: 2em 3em 3em;
     }
-
-
-    
-
     
 }
