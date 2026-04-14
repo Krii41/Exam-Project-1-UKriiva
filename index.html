@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Edit is a curated lifestyle store offering modern essentials across fashion, beauty, and technology.">
+    <meta name="description"
+        content="The Edit is a curated lifestyle store offering modern essentials across fashion, beauty, and technology.">
     <meta name="keywords" content="minimal design, fashion essentials, lifestyle products, everyday tech, beauty shop">
     <meta name="author" content="Urve Kriiva">
     <link rel="stylesheet" href="css/carousel.css">
@@ -12,54 +14,55 @@
     <link rel="stylesheet" href="css/media.css">
     <title>Home | The Edit</title>
 </head>
+
 <body>
     <header>
-            <nav>
-                <a href="account/login.html" class="login">
-                    <img src="assets/icons/login.png" alt="login">
-                </a>
-                <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png"  alt="The Edit">
-                </a>
-                <a href="cart/index.html" class="cart-img">
-                    <img src="assets/icons/cart.png" alt="">
-                </a>
-            </nav>
+        <nav>
+            <a href="account/login.html" class="login">
+                <img src="assets/icons/login.png" alt="login">
+            </a>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="The Edit">
+            </a>
+            <a href="cart/index.html" class="cart-img">
+                <img src="assets/icons/cart.png" alt="">
+            </a>
+        </nav>
     </header>
     <main>
         <section class="hero">
             <div class="hero-slider" id="hero-slider"></div>
-        </section> 
+        </section>
 
-        <section class="futured">
+        <section class="featured" data-section="featured">
             <div class="product-container">
                 <h2>Featured</h2>
                 <div class="products-grid">
-                    <div class="card-large">
-                        <a href="product/index.html">
+                    <div class="card-large" data-slot="large">
+                        <!-- <a href="product/index.html">
                             <img src="assets/testimages/8-perfume-pink-candy.jpg" alt="">
                         </a>
                         <div class="card-prices">
                             <span class="price">$ 000.00</span>
                             <span class="old-price">$ 000.00</span>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="card card-small">
-                        <a href="product/index.html">
+                    <div class="card card-small" data-slot="small-1">
+                        <!-- <a href="product/index.html">
                             <img src="assets/testimages/2-shoes-pink.jpg" alt="">
                         </a>
                         <div class="card-prices">
                             <span class="price">$ 000.00</span>
                             <span class="old-price">$ 000.00</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card card-small card-decorative">
                         <img src="assets/images/futured-img.jpg" alt="">
                     </div>
-                    <div class="card card-small card-mystery">
+                    <div class="card card-small card-mystery" data-slot="mystery">
                         <a href="product/index.html" class="card-media">
                             <img class="card-img" src="assets/images/mysterybox.jpg" alt="">
-                            <img class="card-img card-img-hover" src="assets/testimages/4-bag-red.jpg" alt="">
+                            <img class="card-img card-img-hover" src="" alt="">
                             <div class="card-overlay">
                                 <h3>Mystery Item</h3>
                                 <p>From The Edit</p>
@@ -67,24 +70,24 @@
                             </div>
                         </a>
                         <div class="card-prices">
-                            <span class="price">$ 000.00</span>
-                            <span class="old-price">$ 000.00</span>
+                            <span class="price"></span>
+                            <span class="old-price"></span>
                         </div>
                     </div>
-                    <div class="card card-small">
-                        <a href="product/index.html">
+                    <div class="card card-small" data-slot="small-2">
+                        <!-- <a href="product/index.html">
                             <img src="assets/testimages/12-toy-car.jpg" alt="">
                         </a>
                         <div class="card-prices">
                             <span class="price">$ 000.00</span>
                             <span class="old-price">$ 000.00</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="product-group">
+        <section class="product-group" data-section="group">
             <div class="product-container">
                 <div class="product-group-grid">
                     <div class="card card-small">
@@ -119,7 +122,7 @@
             </div>
         </section>
 
-        <section class="editors-picks">
+        <section class="editors-picks" data-section="editors">
             <div class="product-container">
                 <h2>Editor's picks</h2>
                 <div class="products-grid">
@@ -172,7 +175,7 @@
             </div>
         </section>
 
-        <section class="product-group-tech">
+        <section class="product-group-tech" data-section="tech">
             <div class="product-container">
                 <div class="product-group-grid">
                     <div class="card card-wide">
@@ -225,10 +228,10 @@
             </div>
         </section>
 
-        <section class="this-season">
+        <section class="this-season" data-section="season">
             <div class="product-container">
                 <h2>This season</h2>
-                <div class="product-group-grid">    
+                <div class="product-group-grid">
                     <div class="card card-wide-small">
                         <a href="product/index.html">
                             <img src="assets/testimages/22-boots-black.jpg" alt="">
@@ -287,4 +290,5 @@
     </footer>
     <script type="module" src="main.js"></script>
 </body>
+
 </html>
