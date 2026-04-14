@@ -52,6 +52,7 @@ async function createProducts() {
     renderSmallProduct1(products);
     renderSmallProduct2(products);
     renderMysteryCard(products);
+    renderGroupProducts(products);
 
   } catch (error) {
     console.error("Failed to create products");
@@ -60,12 +61,21 @@ async function createProducts() {
 
 createProducts();
 
+
 // create slots for products
 
 function getSlot(section, slot) {
   return document.querySelector(
     `[data-section="${section}"] [data-slot="${slot}"]`
   );
+}
+
+function renderCard(section, slotName, product, createFn) {
+  const slot = getSlot(section, slotName);
+  if (!slot || !product) return;
+
+  slot.innerHTML = "";
+  slot.appendChild(createFn(product));
 }
 
 // create product price container
@@ -110,6 +120,24 @@ function createLargeCard(product) {
   return card;
 }
 
+function createLargeCardWide(product) {
+  const card = document.createElement("div");
+  const link = document.createElement("a");
+  const img = document.createElement("img");
+
+  card.className = "card card-large";
+  link.href = `product/index.html?id=${product.id}`;
+  img.src = product.image.url;
+  img.alt = product.image.alt;
+
+  const prices = createPrice(product);
+
+  link.appendChild(img);
+  card.append(link, prices);
+
+  return card;
+}
+
 function createSmallCard(product) {
   const card = document.createElement("div");
   const link = document.createElement("a");
@@ -131,29 +159,28 @@ function createSmallCard(product) {
 
 
 
-// render cards
+// render cards featured
 
 function renderLargeProduct(products) {
   const product = products.find(
     p => p.id === "9be4812e-16b2-44e6-bc55-b3aef9db2b82"
   );
 
-  const slot = document.querySelector(
-    '[data-section="featured"] [data-slot="large"]'
-  );
+  const slot = getSlot("featured", "large");
+  if (!slot || !product) return;
 
   slot.innerHTML = "";
   slot.appendChild(createLargeCard(product));
 }
+
 
 function renderSmallProduct1(products) {
   const product = products.find(
     p => p.id === "f2d44fba-09a7-4ccb-9ceb-a6212bf5c213"
   );
 
-  const slot = document.querySelector(
-    '[data-section="featured"] [data-slot="small-1"]'
-  );
+  const slot = getSlot("featured", "small-1")
+  if (!slot || !product) return;
 
   slot.innerHTML = "";
   slot.appendChild(createSmallCard(product));
@@ -164,12 +191,42 @@ function renderSmallProduct2(products) {
     p => p.id === "10d6cc02-b282-46bb-b35c-dbc4bb5d91d9"
   );
 
-  const slot = document.querySelector(
-    '[data-section="featured"] [data-slot="small-2"]'
-  );
+  const slot = getSlot("featured", "small-2");
+  if (!slot || !product) return;
 
   slot.innerHTML = "";
   slot.appendChild(createSmallCard(product));
+}
+
+// render cards group section
+
+/* function renderLargeProductWide(products) {
+  const product = products.find(
+    p => p.id === "159fdd2f-2b12-46de-9654-d9139525ba87"
+  );
+
+  const slot = getSlot("group", "large");
+  if (!slot || !product) return;
+
+  slot.innerHTML = "";
+  slot.appendChild(createLargeCardWide(product));
+} */
+
+function renderGroupProducts(products) {
+  const product1 = products.find(
+    p => p.id === "7238397e-0ee5-4d5c-9e82-bda666dd2470"
+  );
+  const product2 = products.find(
+    p => p.id === "95dc28de-9ef6-4c67-808b-6431a5de43e8"
+  );
+
+  const largeCard = products.find(
+    p => p.id === "159fdd2f-2b12-46de-9654-d9139525ba87"
+  );
+
+  renderCard("group", "small-1", product1, createSmallCard);
+  renderCard("group", "small-2", product2, createSmallCard);
+  renderCard("group", "large", largeCard, createLargeCardWide);
 }
 
 // render mystery card
@@ -179,10 +236,7 @@ function renderMysteryCard(products) {
     p => p.id === "3b43b2e4-62b0-4c02-9166-dffa46a0388c"
   );
 
-  const card = document.querySelector(
-    '[data-section="featured"] [data-slot="mystery"]'
-  );
-
+  const card = getSlot("featured", "mystery");
   if (!card || !product) return;
 
   const link = card.querySelector(".card-media");
