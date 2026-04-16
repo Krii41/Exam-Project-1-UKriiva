@@ -1,6 +1,48 @@
-console.log("initCarousel started");
+export async function setupCarousel() {
+    await loadCarouselProducts();
+    initCarousel();
+}
 
-export function initCarousel() {
+const API_URL = "https://v2.api.noroff.dev/online-shop";
+
+
+const carouselProductIds = [ 
+    "f7bdd538-3914-409d-bd71-8ef962a9a9dd",
+    "894ca18f-9725-40b3-9429-1420ee2054da",
+    "83111322-05a9-4a93-bc81-7d6b58f1a707"
+];
+
+async function loadCarouselProducts() {
+    try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        const products = data.data;
+        
+        const selectedProducts = carouselProductIds
+           .map((id) => products.find((product) => product.id === id))
+           .filter(Boolean);
+
+        const imageElements = [
+            document.getElementById("carousel-product-1"),
+            document.getElementById("carousel-product-2"),
+            document.getElementById("carousel-product-3")
+        ];
+
+        selectedProducts.forEach((product, index) => {
+            const img = imageElements[index];
+            if (!img) return;
+
+            img.src = product.image.url;
+            img.alt = product.image.alt;
+        });
+
+    } catch (error) {
+        console.error("Failed to load carousel products");
+    }
+
+}
+
+ function initCarousel() {
     document.querySelectorAll(".slider").forEach((slider) => {
         const items = slider.querySelectorAll(".slide");
         const dotContainer = slider.parentElement.querySelector(".dot-container");
@@ -59,4 +101,5 @@ export function initCarousel() {
         slider.addEventListener("mouseleave", startAutoplay);
     });
 }
+
 

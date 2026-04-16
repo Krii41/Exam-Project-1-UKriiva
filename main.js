@@ -1,4 +1,4 @@
-import { initCarousel } from "./js/carousel.js";
+import { setupCarousel } from "./js/carousel.js";
 
 async function loadComponent(id, relativePath) {
   const target = document.getElementById(id);
@@ -29,7 +29,7 @@ async function initPage() {
   );
 
   if (hasCarousel) {
-    initCarousel();
+    setupCarousel();
   }
 }
 
@@ -48,7 +48,6 @@ async function createProducts() {
     const data = await response.json();
     const products = data.data;
 
-    /* renderMysteryCard(products); */
     renderFeaturedProducts(products);
     renderGroupProducts(products);
     renderEditorsProducts(products);
