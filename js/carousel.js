@@ -13,6 +13,8 @@ const carouselProductIds = [
 ];
 
 async function loadCarouselProducts() {
+    const buttons = document.querySelectorAll(".slide-button a");
+
     try {
         const response = await fetch(API_URL);
         const data = await response.json();
@@ -30,10 +32,14 @@ async function loadCarouselProducts() {
 
         selectedProducts.forEach((product, index) => {
             const img = imageElements[index];
-            if (!img) return;
+            const btn = buttons[index];
+
+            if (!img || !btn) return;
 
             img.src = product.image.url;
             img.alt = product.image.alt;
+
+            btn.href = `product/index.html?id=${product.id}`;
         });
 
     } catch (error) {
