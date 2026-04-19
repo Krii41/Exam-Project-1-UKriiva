@@ -13,7 +13,7 @@ const carouselProductIds = [
 ];
 
 async function loadCarouselProducts() {
-    const buttons = document.querySelectorAll(".slide-button a");
+    /* const buttons = document.querySelectorAll(".slide-button a"); */
 
     try {
         const response = await fetch(API_URL);
@@ -30,16 +30,26 @@ async function loadCarouselProducts() {
             document.getElementById("carousel-product-3")
         ];
 
+        const buttonElements = [
+            document.getElementById("slide-btn-1"),
+            document.getElementById("slide-btn-2"),
+            document.getElementById("slide-btn-3")
+        ]
+            
+        
+
         selectedProducts.forEach((product, index) => {
             const img = imageElements[index];
-            const btn = buttons[index];
+            const link = buttonElements[index];
 
-            if (!img || !btn) return;
+            if (img) {
+                img.src = product.image.url;
+                img.alt = product.image.alt || product.title;
+            }
 
-            img.src = product.image.url;
-            img.alt = product.image.alt;
-
-            btn.href = `product/index.html?id=${product.id}`;
+            if (link) {
+                link.href = `product/index.html?id=${product.id}`;
+            }
         });
 
     } catch (error) {
