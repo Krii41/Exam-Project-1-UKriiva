@@ -1,3 +1,4 @@
+import { updateCartBadge } from "../main.js";
 
 const API_URL = "https://v2.api.noroff.dev/online-shop";
 
@@ -121,7 +122,12 @@ function renderProduct(product) {
     btn.addEventListener("click", () => {
         addToCart(product);
         btn.textContent = "Added!";
-    })
+        updateCartBadge();
+        
+        setTimeout(() => {
+            btn.textContent = "Add to Cart";
+        }, 2000);
+    });
 
     details.append(
         header, 

@@ -1,3 +1,5 @@
+import { updateCartBadge } from "../main.js";
+
 const cartItems = document.getElementById("cart-items");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -87,8 +89,8 @@ function renderCart() {
     });
 
     updateTotals();
+    updateCartBadge();
 }
-
 
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -97,6 +99,19 @@ function saveCart() {
 function removeItem(id) {
     cart = cart.filter(item => item.id !==id);
 }
+
+function clearCart() {
+    const clearCartBtn = document.getElementById("clear-cart");
+    
+    clearCartBtn.addEventListener("click", () => {
+        cart = [];
+        localStorage.removeItem("cart");
+        renderCart();
+        updateCartBadge();
+    })
+}
+
+clearCart();
 
 function updateTotals() {
     const subtotal = cart.reduce (

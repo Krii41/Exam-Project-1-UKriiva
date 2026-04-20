@@ -82,8 +82,27 @@ nav {
     max-width: 170px;
 }
 
+.badge {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    background: var(--color-primary);
+    color: var(--color-background);
+    border-radius: 50px;
+    font: 700 12px/18px system-ui;
+    text-align: center;
+}
+
+.badge[hidden] {
+    display: none;
+}
+
 .cart-img {
     justify-self: end;
+    position: relative;
 }
 
 .cart-img img {

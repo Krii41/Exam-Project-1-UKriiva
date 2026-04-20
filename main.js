@@ -56,6 +56,29 @@ async function createProducts() {
 
 createProducts();
 
+export function updateCartBadge() {
+  const badge = document.getElementById("cart-count");
+
+  if(!badge) return;
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const totalItems = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+
+  badge.textContent = totalItems;
+
+  if (totalItems === 0) {
+    badge.setAttribute("hidden", "");
+  } else {
+    badge.removeAttribute("hidden");
+  }
+}
+
+updateCartBadge();
+
 
 
 

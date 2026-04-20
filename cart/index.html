@@ -22,6 +22,7 @@
             </a>
             <a href="../cart/index.html" class="cart-img">
                 <img src="../assets/icons/cart.png" alt="">
+                <span id="cart-count" class="badge" hidden></span>
             </a>
         </nav>
     </header>
@@ -31,27 +32,7 @@
         <div id="cart-container" class="cart-container">
             <button id="clear-cart" class="clear-cart">Clear cart</button>
             <section class="cart grid">
-                <div id="cart-items" class="cart-items grid">
-
-                    <!-- <article class="cart-item grid">
-                        <div class="cart-item-image">
-                            <img src="../assets/testimages/3-headphones-beats.jpg" alt="">
-                        </div>
-                        <h2 class="cart-item-title">Gold Headphones</h2>
-                        <p class="item-price">$ 382.49</p>
-
-                        <div class="cart-controls flex">
-                            <button class="qty-btn">-</button>
-                            <span class="item-qty">3</span>
-                            <button class="qty-btn">+</button>
-                        </div>   
-                        <button class="item-remove">&times;</button>
-                    </article>
-
-                     -->
-
-                </div>
-    
+                <div id="cart-items" class="cart-items grid"></div>
                 <section class="cart-summary">
                     <h2 class="summary-title">Cart Totals</h2>
                     <div class="summary-rows">
@@ -70,8 +51,6 @@
                     </div>
                     <a href="../checkout/index.html" class="cta-button btn-primary btn-cart">Proceed to Checkout</a>
                 </section>
-    
-    
             </section>
         </div>
     </main>
