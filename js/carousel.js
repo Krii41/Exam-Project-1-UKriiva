@@ -13,7 +13,6 @@ const carouselProductIds = [
 ];
 
 async function loadCarouselProducts() {
-    /* const buttons = document.querySelectorAll(".slide-button a"); */
 
     try {
         const response = await fetch(API_URL);

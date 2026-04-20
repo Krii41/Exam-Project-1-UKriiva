@@ -28,18 +28,18 @@
     <main>
         <h1>Cart</h1>
         
-        <div class="cart-container">
-            <button class="clear-cart">Clear cart</button>
+        <div id="cart-container" class="cart-container">
+            <button id="clear-cart" class="clear-cart">Clear cart</button>
             <section class="cart grid">
+                <div id="cart-items" class="cart-items grid">
 
-                <div class="cart-items grid">
-
-                    <article class="cart-item grid">
+                    <!-- <article class="cart-item grid">
                         <div class="cart-item-image">
                             <img src="../assets/testimages/3-headphones-beats.jpg" alt="">
                         </div>
                         <h2 class="cart-item-title">Gold Headphones</h2>
                         <p class="item-price">$ 382.49</p>
+
                         <div class="cart-controls flex">
                             <button class="qty-btn">-</button>
                             <span class="item-qty">3</span>
@@ -47,19 +47,8 @@
                         </div>   
                         <button class="item-remove">&times;</button>
                     </article>
-                    <article class="cart-item grid">
-                        <div class="cart-item-image">
-                            <img src="../assets/testimages/3-headphones-beats.jpg" alt="">
-                        </div>
-                        <h2 class="cart-item-title">Gold Headphones</h2>
-                        <p class="item-price">$ 382.49</p>
-                        <div class="cart-controls flex">
-                            <button class="qty-btn">-</button>
-                            <span class="item-qty">3</span>
-                            <button class="qty-btn">+</button>
-                        </div>   
-                        <button class="item-remove">&times;</button>
-                    </article>
+
+                     -->
 
                 </div>
     
@@ -72,11 +61,11 @@
                         </div>
                         <div class="summary-row">
                             <span class="summary-label">Subtotal</span>
-                            <span class="summary-value">$ 1142.48</span>
+                            <span id="cart-subtotal" class="summary-value">0</span>
                         </div>
                         <div class="summary-row-total">
                             <span class="summary-label">Total</span>
-                            <span class="cart-value">$ 1142.48</span>
+                            <span id="cart-total" class="cart-value">$ 0</span>
                         </div>
                     </div>
                     <a href="../checkout/index.html" class="cta-button btn-primary btn-cart">Proceed to Checkout</a>
@@ -98,5 +87,6 @@
         <div class="copyright">&copy; 2026 The Edit</div>
     </footer>
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../js/cart.js"></script>
 </body>
 </html>

@@ -33,12 +33,12 @@
         justify-self: start;
     }
 
-    .slide-text {
-        grid-area: title;
+    .slide-media img {
+        object-position: 90% 100%;
     }
 
-    .slide-media {
-        grid-area: img;
+    .slide-text {
+        grid-area: title;
     }
 
     .slide-button {
