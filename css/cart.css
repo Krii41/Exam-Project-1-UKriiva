@@ -3,6 +3,11 @@
     margin: 0 auto;
 }
 
+.empty-cart {
+    text-align: center;
+    margin-top: 4em;
+}
+
 h1 {
     text-align: center;
     margin: 3em 0 1.5em 0;    

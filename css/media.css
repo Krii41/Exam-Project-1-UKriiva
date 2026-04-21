@@ -244,6 +244,11 @@
         max-width: 20px;
     }
 
+    .badge {
+        top: 12px;
+        right: 14px;
+    }
+
     /* carousel */
 
     .slider {

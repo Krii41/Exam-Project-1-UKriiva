@@ -50,7 +50,8 @@ async function createProducts() {
     renderHomePage(products);
 
   } catch (error) {
-    console.error("Failed to create products");
+    console.error(error);
+    throw error;
   }
 }
 
@@ -78,6 +79,8 @@ export function updateCartBadge() {
 }
 
 updateCartBadge();
+
+
 
 
 
