@@ -72,6 +72,15 @@ function renderProduct(product) {
     shareImg.src = "../assets/icons/share.png";
     shareImg.alt = "Share product";
 
+    shareBtn.addEventListener("click", async () => {
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            alert ("Product link copied!");
+        } catch (error) {
+            console.error("Failed to copy link", error);
+        }
+    })
+
     shareBtn.appendChild(shareImg);
     header.append(title, shareBtn);
 
@@ -79,6 +88,14 @@ function renderProduct(product) {
 
     const tagsContainer = document.createElement("div");
     tagsContainer.className = "tags flex";
+
+    product.tags.forEach(tag => {
+        const tagEl = document.createElement("span");
+        tagEl.className = "tag";
+        tagEl.textContent = tag;
+
+        tagsContainer.appendChild(tagEl);
+    })
 
     // product rating
 

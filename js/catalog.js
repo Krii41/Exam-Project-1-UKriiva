@@ -269,8 +269,9 @@ function getSlot(section, slot) {
   }
   
   function updateMysteryCard(card, product) {
+
     const link = card.querySelector(".card-media");
-    const hoverImg = card.querySelector(".card-img.card-img-hover");
+    const hoverImg = card.querySelector(".card-img-hover");
     const pricesContainer = card.querySelector(".card-prices");
   
     link.href = `product/index.html?id=${product.id}`;

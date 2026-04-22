@@ -36,7 +36,6 @@ async function initPage() {
 
 initPage();
 
-
 // load products to the home page
 
 const API_URL = "https://v2.api.noroff.dev/online-shop";
@@ -55,7 +54,12 @@ async function createProducts() {
   }
 }
 
-createProducts();
+const homePageSection = document.querySelector("[data-section]");
+
+if (homePageSection) {
+  createProducts();
+}
+
 
 export function updateCartBadge() {
   const badge = document.getElementById("cart-count");
