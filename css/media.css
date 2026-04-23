@@ -178,6 +178,16 @@
         grid-row: 1;
     }
 
+    .featured .card-large,
+    .editors-picks .card-large {
+        display: block;
+    }
+
+    .featured .card-large img,
+    .editors-picks .card-large img {
+        margin-bottom: .5em;
+    }
+
     .product-group .card-large {
         grid-row: 2;
     }

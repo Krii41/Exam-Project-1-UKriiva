@@ -44,10 +44,6 @@ async function loadCarouselProducts() {
             if (img) {
                 img.src = product.image.url;
                 img.alt = product.image.alt || product.title;
-
-                if (window.location.pathname.includes("/product/")) {
-                    img.style.objectPosition = "center 5%";
-                }
             }
 
             if (link) {

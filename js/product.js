@@ -157,14 +157,21 @@ function renderProduct(product) {
         );
 
     // reviews
-    
+
     const reviewsSection = document.createElement("section");
     const reviewsTitle = document.createElement("h2");
     const reviewsList = document.createElement("div");
+    const reviews = product.reviews || [];
 
     reviewsSection.className = "reviews";
     reviewsTitle.innerText = "Reviews";
     reviewsList.className = "review-list grid";
+
+    if (reviews.length === 0) {
+        const empty = document.createElement("p");
+        empty.textContent = "No reviews yet.";
+        reviewsList.appendChild(empty);
+    }
 
     product.reviews.forEach( r => {
         const review = document.createElement("article");
