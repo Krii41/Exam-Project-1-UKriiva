@@ -30,12 +30,12 @@
     </header>
     <main>
         <h1>Login</h1>
-        <form action="/action_page.php" class="grid">
-            <label for="e-mail">E-mail</label>
-            <input type="text" id="e-mail" name="e-mail" placeholder="example@gmail.com" required>
+        <form id="login-form" class="grid">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" placeholder="example@gmail.com" required>
             <label for="password">Password</label>
-            <input type="text" id="password" name="password" placeholder="password" required>
-            <button class="cta-button btn-form">Login</button>
+            <input type="password" id="password" name="password" placeholder="password" required>
+            <button type="submit" class="cta-button btn-form">Login</button>
         </form>
         <p>Don't have an account?
             <a href="register.html" class="link-primary">Register</a>
@@ -53,6 +53,7 @@
         <div class="copyright">&copy; 2026 The Edit</div>
     </footer>
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../js/auth.js"></script>
 </body>
 
 </html>
