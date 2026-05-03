@@ -51,7 +51,7 @@ function renderProduct(product) {
     const img = document.createElement("img");
 
     article.className = "product-layout grid";
-    imageSection.className = "product-image";
+    imageSection.className = "product-image hover-dark";
     img.src = product.image.url;
     img.alt = product.image.alt;
 
