@@ -222,6 +222,24 @@ input::placeholder {
     color: var(--color-input-text);
 }
 
+/*   parallax scroll */
+
+.reveal {
+    opacity: 0;
+    transform: translate(100px);
+    transition: all 1.3s ease;
+}
+
+.product-group.reveal,
+.product-group-tech.reveal {
+    transform: translate(-100px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
 /*  succsess page  */
 
 .order-success-message {
