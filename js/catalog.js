@@ -308,7 +308,7 @@ function getSlot(section, slot) {
     renderMysteryCards(products);
   }
 
-  const sections = document.querySelectorAll(".reveal");
+const sections = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -319,10 +319,10 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.15,
+    threshold: 0.3,
   }
 );
 
-sections.forEach((section) => {
+  sections.forEach((section) => {
   observer.observe(section);
 });

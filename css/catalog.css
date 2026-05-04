@@ -242,3 +242,21 @@
     grid-column: 2 / span 2;
     padding-bottom: 1em;
 }
+
+/*   parallax scroll */
+
+.reveal {
+    opacity: 0;
+    transform: translate(100px);
+    transition: all 1.5s ease;
+}
+
+.product-group.reveal,
+.product-group-tech.reveal {
+    transform: translate(-100px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
