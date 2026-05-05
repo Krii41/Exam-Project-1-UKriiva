@@ -132,8 +132,20 @@ function updateTotals() {
         0
     );
 
+    const shipping = subtotal > 100 ? 25 : 0;
+
     document.getElementById("cart-subtotal").textContent = `$ ${subtotal.toFixed(2)}`;
-    document.getElementById("cart-total").textContent = `$ ${subtotal.toFixed(2)}`;
+
+    document.getElementById("shipping-value").textContent = 
+        shipping === 0 ? "Free" : `$ ${shipping.toFixed(2)}`;
+
+    document.getElementById("cart-total").textContent = 
+        `$ ${(subtotal + shipping).toFixed(2)}`;
+
+    
+
+    
+
 }
 
 renderCart();
