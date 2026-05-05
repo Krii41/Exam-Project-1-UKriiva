@@ -3,15 +3,11 @@ import { updateCartBadge } from "../main.js";
 function renderCheckoutTotal() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const subtotal = cart.reduce(
+  const total = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-
-  const shipping = subtotal > 100 ? 25 : 0;
-
-  const total = subtotal + shipping;
-
+  
   document.getElementById("checkout-total").innerText = `$ ${total.toFixed(2)}`;
 }
 
