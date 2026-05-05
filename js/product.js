@@ -56,11 +56,12 @@ function renderProduct(product) {
     img.alt = product.image.alt;
 
     imageSection.appendChild(img);
-    
+
     img.addEventListener("click", () => {
         modalImage.src = product.image.url;
         modalImage.alt = product.image.alt;
         imageModal.classList.add("active");
+        document.body.style.overflow = "hidden";
     })
 
 
@@ -246,6 +247,7 @@ modalClose.addEventListener("click", () => {
 imageModal.addEventListener("click", (e) => {
     if (e.target === imageModal) {
         imageModal.classList.remove("active");
+        document.body.style.overflow = "";
     }
 })
 
