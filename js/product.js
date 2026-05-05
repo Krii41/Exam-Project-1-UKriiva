@@ -56,6 +56,13 @@ function renderProduct(product) {
     img.alt = product.image.alt;
 
     imageSection.appendChild(img);
+    
+    img.addEventListener("click", () => {
+        modalImage.src = product.image.url;
+        modalImage.alt = product.image.alt;
+        imageModal.classList.add("active");
+    })
+
 
     // product details
 
@@ -227,3 +234,18 @@ function addToCart(product) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+const imageModal = document.getElementById("image-modal");
+const modalImage = document.getElementById("modal-image");
+const modalClose = document.getElementById("modal-close");
+
+modalClose.addEventListener("click", () => {
+    imageModal.classList.remove("active");
+});
+
+imageModal.addEventListener("click", (e) => {
+    if (e.target === imageModal) {
+        imageModal.classList.remove("active");
+    }
+})
+
