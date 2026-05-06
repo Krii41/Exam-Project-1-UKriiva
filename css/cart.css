@@ -10,7 +10,7 @@
 
 h1 {
     text-align: center;
-    margin: 3em 0 1.5em 0;    
+    margin: 3em 0 1.5em 0;
 }
 
 .clear-cart {
@@ -25,7 +25,6 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: background-position 0.6s ease;
-
 }
 
 .clear-cart:hover {
@@ -53,9 +52,8 @@ h1 {
     grid-template-columns: 120px 1fr auto auto auto;
     align-items: center;
     column-gap: 1em;
-    grid-template-areas: 
+    grid-template-areas:
         "image title price gty delete";
-    
 }
 
 .cart-item-title,
@@ -85,10 +83,9 @@ h1 {
     font-weight: 200;
     line-height: 1;
     padding-bottom: 2px;
-    
 }
 
-.cart-item-image img{
+.cart-item-image img {
     width: 100px;
     height: 100px;
     display: block;
@@ -101,7 +98,6 @@ h1 {
     background: none;
     font-size: 2rem;
     color: var(--color-cart-action);
-
 }
 
 .cart-summary {
@@ -140,7 +136,7 @@ h1 {
     border-top: 2px solid var(--color-cart-action);
 }
 
-.summary-row-total > span {
+.summary-row-total>span {
     font-weight: 600;
 }
 
@@ -148,5 +144,4 @@ h1 {
     font-weight: 500;
     font-size: 1em;
     padding: .7em 1.5em;
-
 }

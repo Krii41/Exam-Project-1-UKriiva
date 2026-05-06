@@ -6,7 +6,7 @@
     background-image: url("../assets/images/background.jpg");
     background-size: cover;
     position: relative;
-    height: 500px;    
+    height: 500px;
 }
 
 .slide {
@@ -23,17 +23,17 @@
     visibility: visible;
 }
 
-.slide-content {    
+.slide-content {
     max-width: 850px;
     margin: 0 auto;
     padding: 4.5em 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
-    grid-template-areas: 
-     "title img"
-     "title img"
-     "button img";
+    grid-template-areas:
+        "title img"
+        "title img"
+        "button img";
 }
 
 .slide-title {
@@ -46,7 +46,7 @@
 .slide-description {
     margin-top: 2em;
     font-size: 20px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .slide-button {

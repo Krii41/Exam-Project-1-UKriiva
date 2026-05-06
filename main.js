@@ -23,7 +23,7 @@ async function loadComponent(id, relativePath) {
 }
 
 async function initPage() {
-  
+
   const hasCarousel = await loadComponent(
     "hero-slider",
     "./components/carousel.html"
@@ -36,7 +36,6 @@ async function initPage() {
 
 initPage();
 
-// load products to the home page
 
 const API_URL = "https://v2.api.noroff.dev/online-shop";
 
@@ -64,7 +63,7 @@ if (homePageSection) {
 export function updateCartBadge() {
   const badge = document.getElementById("cart-count");
 
-  if(!badge) return;
+  if (!badge) return;
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -95,5 +94,5 @@ updateCartBadge();
 
 
 
-  
+
 

@@ -25,7 +25,7 @@ function renderCartItems(item) {
     price.className = "item-price";
     price.textContent = `$ ${item.price}`;
 
-    
+
 
     const controls = document.createElement("div");
     const minusBtn = document.createElement("button");
@@ -77,7 +77,7 @@ function renderCartItems(item) {
     article.append(imgWrapper, title, price, controls, removeBtn);
 
     return article;
-    
+
 }
 
 function renderCart() {
@@ -110,12 +110,12 @@ function saveCart() {
 }
 
 function removeItem(id) {
-    cart = cart.filter(item => item.id !==id);
+    cart = cart.filter(item => item.id !== id);
 }
 
 export function clearCart() {
     const clearCartBtn = document.getElementById("clear-cart");
-    
+
     clearCartBtn.addEventListener("click", () => {
         cart = [];
         localStorage.removeItem("cart");
@@ -127,13 +127,13 @@ export function clearCart() {
 clearCart();
 
 function updateTotals() {
-    const subtotal = cart.reduce (
+    const subtotal = cart.reduce(
         (sum, item) => sum + item.price * item.quantity,
         0
     );
-   
+
     document.getElementById("cart-subtotal").textContent = `$ ${subtotal.toFixed(2)}`;
-    document.getElementById("cart-total").textContent = `$ ${(subtotal).toFixed(2)}`;    
+    document.getElementById("cart-total").textContent = `$ ${(subtotal).toFixed(2)}`;
 
 }
 

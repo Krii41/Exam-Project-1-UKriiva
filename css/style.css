@@ -36,8 +36,6 @@ body {
     min-height: 100vh;
 }
 
-
-
 main {
     margin-bottom: 5em;
 }
@@ -55,12 +53,10 @@ a {
 }
 
 header {
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.85),
-        rgba(255, 255, 255, 0.85)
-    ), url("../assets/images/background.jpg");  
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85),
+            rgba(255, 255, 255, 0.85)), url("../assets/images/background.jpg");
     background-size: cover;
-    box-shadow: 0px 1px 4px rgba(43, 43, 43, 0.25); 
+    box-shadow: 0px 1px 4px rgba(43, 43, 43, 0.25);
 }
 
 nav {
@@ -70,7 +66,6 @@ nav {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    
 }
 
 .login {
@@ -113,8 +108,6 @@ nav {
     transform: scale(1);
 }
 
-
-  
 .logo img {
     max-width: 170px;
 }
@@ -182,7 +175,7 @@ nav {
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
     background-color: transparent;
-   
+
 }
 
 .link-primary {
@@ -252,10 +245,8 @@ input::placeholder {
 /*   footer   */
 
 footer {
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.1)
-    ), url("../assets/images/background.jpg");  
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1)), url("../assets/images/background.jpg");
     background-size: cover;
 }
 
@@ -273,13 +264,13 @@ footer {
     justify-self: end;
 }
 
-.footer-logo img{
+.footer-logo img {
     display: block;
     max-width: 11.75em;
 }
 
 .slogan {
-    color: var(--color-primary);   
+    color: var(--color-primary);
     font-weight: 600;
     justify-self: start;
 }

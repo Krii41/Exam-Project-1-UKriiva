@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="../css/media.css">
     <title>Checkout | The Edit</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -21,7 +23,7 @@
                 </div>
             </a>
             <a href="../index.html" class="logo">
-                <img src="../assets/images/logo.png"  alt="The Edit">
+                <img src="../assets/images/logo.png" alt="The Edit">
             </a>
             <a href="../cart/index.html" class="cart-img">
                 <img src="../assets/icons/cart.png" alt="">
@@ -32,7 +34,6 @@
     <main>
         <h1>Checkout</h1>
         <form class="grid">
-
             <p class="legend-header">Delivery address</p>
             <fieldset class="delivery grid">
                 <legend class="visually-hidden">Delivery address</legend>
@@ -53,36 +54,30 @@
                 <label for="country">Country</label>
                 <input type="text" id="country" name="country" placeholder="country" required>
             </fieldset>
-
             <p class="legend-header">Payment</p>
             <fieldset class="payment flex">
                 <legend class="visually-hidden">Payment</legend>
-
                 <label class="payment-option grid">
                     <img src="../assets/icons/visa.svg" alt="visa">
                     <input type="radio" name="payment" value="visa">
                     <span class="custom-radio"></span>
                 </label>
-
                 <label class="payment-option">
                     <img src="../assets/icons/paypal.svg" alt="paypal">
                     <input type="radio" name="payment" value="paypal">
                     <span class="custom-radio"></span>
                 </label>
-                
                 <label class="payment-option">
                     <img src="../assets/icons/apple-pay.svg" alt="apple-pay">
                     <input type="radio" name="payment" value="apple-pay">
                     <span class="custom-radio"></span>
                 </label>
-
                 <label class="payment-option">
                     <img src="../assets/icons/amazon-pay.svg" alt="amazon-pay">
                     <input type="radio" name="payment" value="amazon-pay">
                     <span class="custom-radio"></span>
                 </label>
             </fieldset>
-
             <section class="total flex">
                 <span>Total</span>
                 <span id="checkout-total"></span>
@@ -104,4 +99,5 @@
     <script type="module" src="../main.js"></script>
     <script type="module" src="../js/checkout.js"></script>
 </body>
+
 </html>

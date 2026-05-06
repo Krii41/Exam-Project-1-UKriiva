@@ -45,7 +45,6 @@ createProductPage();
 function renderProduct(product) {
     const container = document.getElementById("product-container");
 
-    // product image
     const article = document.createElement("article");
     const imageSection = document.createElement("section");
     const img = document.createElement("img");
@@ -64,9 +63,6 @@ function renderProduct(product) {
         document.body.style.overflow = "hidden";
     })
 
-
-    // product details
-
     const details = document.createElement("section");
     const header = document.createElement("div");
     const title = document.createElement("h1");
@@ -83,7 +79,7 @@ function renderProduct(product) {
     shareBtn.addEventListener("click", async () => {
         try {
             await navigator.clipboard.writeText(window.location.href);
-            alert ("Product link copied!");
+            alert("Product link copied!");
         } catch (error) {
             console.error("Failed to copy link", error);
         }
@@ -91,8 +87,6 @@ function renderProduct(product) {
 
     shareBtn.appendChild(shareImg);
     header.append(title, shareBtn);
-
-    // product tags
 
     const tagsContainer = document.createElement("div");
     tagsContainer.className = "tags flex";
@@ -104,8 +98,6 @@ function renderProduct(product) {
 
         tagsContainer.appendChild(tagEl);
     })
-
-    // product rating
 
     const ratingContainer = document.createElement("div");
     const star = document.createElement("img");
@@ -119,8 +111,6 @@ function renderProduct(product) {
 
     ratingContainer.append(star, ratingText, reviewCount);
 
-    // product price
-
     const currentPrice = document.createElement("p");
     const priceOriginal = document.createElement("p");
 
@@ -132,13 +122,9 @@ function renderProduct(product) {
     if (product.discountedPrice < product.price) {
         priceOriginal.textContent = `$ ${product.price}`;
     }
-    
-    // product description
 
     const desc = document.createElement("p");
     desc.textContent = product.description;
-
-    // button add to cart
 
     const btn = document.createElement("button");
     btn.className = "add-to-cart cta-button btn-primary";
@@ -148,23 +134,21 @@ function renderProduct(product) {
         addToCart(product);
         btn.textContent = "Added!";
         updateCartBadge();
-        
+
         setTimeout(() => {
             btn.textContent = "Add to Cart";
         }, 2000);
     });
 
     details.append(
-        header, 
-        tagsContainer, 
-        ratingContainer, 
+        header,
+        tagsContainer,
+        ratingContainer,
         currentPrice,
         priceOriginal,
         desc,
         btn
-        );
-
-    // reviews
+    );
 
     const reviewsSection = document.createElement("section");
     const reviewsTitle = document.createElement("h2");
@@ -181,7 +165,7 @@ function renderProduct(product) {
         reviewsList.appendChild(empty);
     }
 
-    product.reviews.forEach( r => {
+    product.reviews.forEach(r => {
         const review = document.createElement("article");
         const rating = document.createElement("div");
 
@@ -190,10 +174,10 @@ function renderProduct(product) {
 
         for (let i = 1; i <= 5; i++) {
             const star = document.createElement("img");
-            star.src = 
-            i <= r.rating
-            ? "../assets/icons/star.png"
-            : "../assets/icons/emptystar.png";
+            star.src =
+                i <= r.rating
+                    ? "../assets/icons/star.png"
+                    : "../assets/icons/emptystar.png";
             rating.appendChild(star);
         }
 
@@ -207,13 +191,13 @@ function renderProduct(product) {
 
         review.append(rating, text, author);
         reviewsList.appendChild(review);
-        
+
     });
 
     reviewsSection.append(reviewsTitle, reviewsList);
-    
+
     article.append(imageSection, details, reviewsSection);
-    container.appendChild(article);   
+    container.appendChild(article);
 }
 
 function addToCart(product) {

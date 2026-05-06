@@ -232,10 +232,6 @@
 }
 
 
-
-
-
-
 @media(max-width: 480px) {
 
     body {
@@ -290,7 +286,5 @@
         margin: 0 auto;
         padding: 2em 3em 3em;
     }
-
-    
 
 }
