@@ -223,7 +223,7 @@
     }
 
     .slogan {
-        font-size: 16px;
+        font-size: 0.8em;
     }
 
     .copyright {
@@ -290,5 +290,7 @@
         margin: 0 auto;
         padding: 2em 3em 3em;
     }
+
+    
 
 }

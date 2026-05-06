@@ -279,10 +279,13 @@ footer {
 }
 
 .slogan {
-    color: var(--color-primary);
-    font-size: 22px;
+    color: var(--color-primary);   
     font-weight: 600;
     justify-self: start;
+}
+
+.slogan p {
+    font-size: 1.3em;
 }
 
 .copyright {
