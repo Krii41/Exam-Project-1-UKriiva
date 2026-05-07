@@ -39,7 +39,7 @@ function createLargeCard(product) {
   card.className = "card-large";
   link.href = `product/index.html?id=${product.id}`;
   img.src = product.image.url;
-  img.alt = product.image.alt;
+  img.alt = product.image?.alt || product.title || "Product image";
 
   const prices = createPrice(product);
 
@@ -57,7 +57,7 @@ function createLargeCardSecondary(product) {
   card.className = "card card-large";
   link.href = `product/index.html?id=${product.id}`;
   img.src = product.image.url;
-  img.alt = product.image.alt;
+  img.alt = product.image?.alt || product.title || "Product image";
 
   const prices = createPrice(product);
 
@@ -75,7 +75,7 @@ function createSmallCard(product) {
   card.className = "card card-small";
   link.href = `product/index.html?id=${product.id}`;
   img.src = product.image.url;
-  img.alt = product.image.alt;
+  img.alt = product.image?.alt || product.title || "Product image";
 
   const prices = createPrice(product);
 
@@ -94,7 +94,7 @@ function createWideCard(product) {
   card.className = "card card-wide";
   link.href = `product/index.html?id=${product.id}`;
   img.src = product.image.url;
-  img.alt = product.image.alt;
+  img.alt = product.image?.alt || product.title || "Product image";
 
   const prices = createPrice(product);
 
@@ -113,7 +113,7 @@ function createWideSmallCard(product) {
   card.className = "card card-wide-small";
   link.href = `product/index.html?id=${product.id}`;
   img.src = product.image.url;
-  img.alt = product.image.alt;
+  img.alt = product.image?.alt || product.title || "Product image";
 
   const prices = createPrice(product);
 
@@ -132,7 +132,7 @@ function createTallCard(product) {
   card.className = "card card-tall";
   link.href = `product/index.html?id=${product.id}`;
   img.src = product.image.url;
-  img.alt = product.image.alt;
+  img.alt = product.image?.alt || product.title || "Product image";
 
   const prices = createPrice(product);
 

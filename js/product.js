@@ -52,7 +52,7 @@ function renderProduct(product) {
     article.className = "product-layout grid";
     imageSection.className = "product-image hover-dark";
     img.src = product.image.url;
-    img.alt = product.image.alt;
+    img.alt = product.image?.alt || product.title || "Product image";
 
     imageSection.appendChild(img);
 
@@ -106,6 +106,7 @@ function renderProduct(product) {
 
     ratingContainer.className = "rating flex";
     star.src = "../assets/icons/star.png";
+    star.alt = "Rating";
     ratingText.textContent = product.rating;
     reviewCount.textContent = `(${product.reviews.length} reviews)`;
 
