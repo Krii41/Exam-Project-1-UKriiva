@@ -85,6 +85,12 @@ h1 {
     padding-bottom: 2px;
 }
 
+.qty-btn:hover {
+    color: #605e5d;
+    border: 1px solid #605e5d;
+    transition: 0.6s ease;
+}
+
 .cart-item-image img {
     width: 100px;
     height: 100px;
@@ -98,6 +104,10 @@ h1 {
     background: none;
     font-size: 2rem;
     color: var(--color-cart-action);
+}
+
+.item-remove:hover {
+    color: #605e5d;
 }
 
 .cart-summary {
