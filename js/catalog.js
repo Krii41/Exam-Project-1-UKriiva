@@ -1,4 +1,3 @@
-
 function getSlot(section, slot) {
   return document.querySelector(
     `[data-section="${section}"] [data-slot="${slot}"]`
