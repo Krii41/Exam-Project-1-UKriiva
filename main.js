@@ -15,9 +15,11 @@ async function loadComponent(id, relativePath) {
 
     const html = await response.text();
     target.innerHTML = html;
+
     return true;
+
   } catch (error) {
-    console.error(error);
+    console.error("Component loading failed:",error);
     return false;
   }
 }
@@ -39,7 +41,7 @@ initPage();
 
 const API_URL = "https://v2.api.noroff.dev/online-shop";
 
-async function createProducts() {
+async function loadProducts() {
   try {
     const response = await fetch(API_URL);
     const data = await response.json();
@@ -48,7 +50,7 @@ async function createProducts() {
     renderHomePage(products);
 
   } catch (error) {
-    console.error("Failed to create products");
+    console.error("Failed to create products", error);
     throw error;
   }
 }
@@ -56,7 +58,7 @@ async function createProducts() {
 const homePageSection = document.querySelector("[data-section]");
 
 if (homePageSection) {
-  createProducts();
+  loadProducts();
 }
 
 

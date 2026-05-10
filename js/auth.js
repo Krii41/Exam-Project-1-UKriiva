@@ -10,13 +10,13 @@ async function registerUser(url, userData) {
             },
             body: JSON.stringify(userData),
         };
-        const response = await fetch(url, postData)
+        const response = await fetch(url, postData);
         const result = await response.json();
 
         console.log(result);
 
     } catch (error) {
-        console.error("It does not work", error);
+        console.error("Registration failed:", error);
     }
 }
 
@@ -64,7 +64,7 @@ async function loginUser(url, userData) {
         }
 
     } catch (error) {
-        console.log(error);
+        console.error("Login failed:", error);
     }
 
 }
